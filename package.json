@@ -11,6 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "codemirror": "^5.11.0",
+    "glob": "^6.0.4",
+    "knockout": "^3.4.0",
     "marked": "^0.3.5"
   }
 }
