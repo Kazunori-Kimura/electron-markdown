@@ -45,6 +45,7 @@
   }
   #preview {
     width: calc((100% - 200px) / 2);
+    overflow: scroll;
   }
   .CodeMirror {
     width: 100%;
@@ -65,15 +66,14 @@
   <div id="content" class="flex-parent">
     <div id="files">
       <ul class="list-group" data-bind="foreach: files">
-        <li class="list-group-item" data-bind="text: name, click: $root.select"></li>
+        <li class="list-group-item"
+          data-bind="text: path, click: $root.select, css: { 'active': $root.isActive($data) }"></li>
       </ul>
     </div>
     <div id="editor">
       <textarea name="code" id="code"></textarea>
     </div>
-    <div id="preview">
-
-    </div>
+    <div id="preview" data-bind="html: preview"></div>
   </div>
 
   <script src="lib/index.js"></script>
